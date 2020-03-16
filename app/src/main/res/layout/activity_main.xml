@@ -1,16 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="15dp"
     tools:context=".MainActivity">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+
+        <ImageView
+            android:layout_margin="15dp"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_marginBottom="15dp"
+            android:layout_gravity="center"
+            android:src="@drawable/cute_01"
+            android:scaleType="centerCrop"/>
+
+
+
+
+
+    </LinearLayout>
+<!--    <ImageView-->
+<!--        android:layout_width="150dp"-->
+<!--        android:layout_height="150dp"-->
+<!--        android:src="@drawable/fu_logo01"/>-->
+
+
+
 
     <android.inputmethodservice.ExtractEditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="아이디"/>
+        android:text="이름"/>
 
     <EditText
         android:layout_width="match_parent"
@@ -24,6 +59,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:text="비밀번호"/>
 
 
@@ -38,12 +74,14 @@
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
         android:checked="true"
         android:text="자동 로그인" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:text="로그인"/>
 
 
@@ -52,26 +90,30 @@
 <!--        android:layout_width="match_parent"-->
 <!--        android:layout_height="wrap_content"-->       이런게 있음
 <!--        android:src="@drawable/ic_launcher_foreground"/>-->
-
-    <RadioGroup
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:visibility="gone"
+        android:orientation="vertical">
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="남성" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="남성" />
 
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="여성" />
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="기타" />
-    </RadioGroup>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="여성" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="기타" />
+        </RadioGroup>
 
 
 
@@ -86,16 +128,15 @@
             android:inputType="phone"
             android:hint="전화번호를 입력하세요"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="푸시알림 On/Off"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="푸시알림 On/Off"/>
 
-    <Switch
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="푸시알림 사용 여부"/>
-
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="푸시알림 사용 여부"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -106,5 +147,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:lines="10"/>
+
+
+
+
+    </LinearLayout>
+
+
+
 
 </LinearLayout>
